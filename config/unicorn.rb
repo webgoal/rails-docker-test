@@ -5,12 +5,12 @@ working_directory @dir
 
 timeout 30
 
-listen File.join('/tmp/sockets/unicorn.sock')
+listen File.join('/tmp/unicorn.sock')
 
-pid File.join(@dir, '/tmp/pids/unicorn.pid')
+# pid File.join(@dir, '/tmp/pids/unicorn.pid')
 
-stderr_path File.join(@dir, 'log/unicorn.stderr.log')
-stdout_path File.join(@dir, 'log/unicorn.stdout.log')
+# stderr_path File.join(@dir, 'log/unicorn.stderr.log')
+# stdout_path File.join(@dir, 'log/unicorn.stdout.log')
 
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) and
@@ -38,4 +38,3 @@ after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
     ActiveRecord::Base.establish_connection
 end
-Gravatar
