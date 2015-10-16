@@ -5,7 +5,7 @@ working_directory @dir
 
 timeout 30
 
-# listen File.join(@dir, '/tmp/sockets/unicorn.sock')
+listen File.join(@dir, '/tmp/sockets/unicorn.sock')
 
 pid File.join(@dir, '/tmp/pids/unicorn.pid')
 

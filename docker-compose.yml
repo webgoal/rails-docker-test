@@ -10,12 +10,3 @@ web:
     - "3000:3000"
   links:
     - db
-
-web_production:
-  build: .
-  dockerfile: Dockerfile.production
-  command: bundle exec unicorn_rails -c config/unicorn.rb -E production -D -p 8080
-  ports:
-    - "8080:8080"
-  links:
-    - db
