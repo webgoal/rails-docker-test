@@ -1,7 +1,7 @@
 db:
   image: postgres
 
-web_production:
+web:
   build: .
   dockerfile: Dockerfile.production
   command: bundle exec unicorn_rails -c config/unicorn.rb -E production -D
