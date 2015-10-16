@@ -7,7 +7,7 @@ timeout 30
 
 listen File.join('/tmp/unicorn.sock')
 
-preload_app true if ENV['RAILS_ENV'] != 'development'
+preload_app true# if ENV['RAILS_ENV'] != 'development'
 
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
